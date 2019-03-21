@@ -77,18 +77,20 @@ Then run this command:
 
 As a result you should now have a file `export.yaml` that looks like this:
 
-> ATM Locator: https://127.0.0.1:8075/api/portal/v1.3/discovery/swagger/api/ATM Locator
-Currency: https://127.0.0.1:8075/api/portal/v1.3/discovery/swagger/api/Currency
+> apimanager: https://127.0.0.1:8075   
+> -> ATM Locator: /api/portal/v1.3/discovery/swagger/api/ATM Locator   
+> -> Currency: /api/portal/v1.3/discovery/swagger/api/Currency   
+
 
 
 ## Step 2: Import into Amplify Central
 
-(work in progress)
+(Python script to import YAML into Amplify Central - each one imported as a Proxy - work in progress)
 
 ## Step 3: Verify Imported Proxies and Publish
 
-(work in progress)
+(Proxies now appear in Amplify Central - review & publish - work in progress)
 
 ## Step 4: Consume APIs
 
-(work in progress)
+(login as 'user' into Amplify Central - download Swagger - consume API - work in progress)
