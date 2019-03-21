@@ -36,4 +36,29 @@ Let's use cURL commands to see the APIs in action:
 
 # Step 1: Export APIs
 
+Let's use the [API Manager v7 API](http://apidocs.axway.com/api_documentation/apimanager/7.5.3/api-manager-V_1_3-swagger.json) to export the APIs that are managed by this instance. 
 
+You could choose to change the password for 'apiadmin' temporarily for this exercise.
+
+The [Postman Collection](apimv7-postman.json) contains the examples for listing all virtualized APIs, getting details and the Swagger definitions for each API.
+
+A cURL command to retrieve all API endpoints could look like this, assuming the credentials for 'apiadmin' include the default password:
+
+`curl -X GET https://127.0.0.1:8075/api/portal/v1.3/discovery/apis -H 'Accept: application/json' -H 'Authorization: Basic YXBpYWRtaW46Y2hhbmdlbWU='`
+
+> [
+    {
+        "name": "ATM Locator",
+        "summary": null,
+        "id": "61b0ddf9-f0b3-43aa-b984-be2b789749c6",
+        "uri": "https://127.0.0.1:8075/api/portal/v1.3/discovery/swagger/api/ATM+Locator",
+        "type": "rest"
+    },
+    {
+        "name": "Currency",
+        "summary": null,
+        "id": "d6c9ec45-889d-4ba5-9a79-ef800c95dbc6",
+        "uri": "https://127.0.0.1:8075/api/portal/v1.3/discovery/swagger/api/Currency",
+        "type": "rest"
+    }
+]

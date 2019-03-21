@@ -1,0 +1,142 @@
+{
+	"info": {
+		"_postman_id": "f60aad34-9035-4ef6-a6e5-840c3feb14d4",
+		"name": "API Manager v7 Export",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get All Frontend APIs",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "changeme",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "apiadmin",
+							"type": "string"
+						},
+						{
+							"key": "saveHelperData",
+							"type": "any"
+						},
+						{
+							"key": "showPassword",
+							"value": false,
+							"type": "boolean"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://127.0.0.1:8075/api/portal/v1.3/discovery/apis",
+					"protocol": "https",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8075",
+					"path": [
+						"api",
+						"portal",
+						"v1.3",
+						"discovery",
+						"apis"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Details for 'Currency'",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://127.0.0.1:8075/api/portal/v1.3/discovery/swagger/api/Currency",
+					"protocol": "https",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8075",
+					"path": [
+						"api",
+						"portal",
+						"v1.3",
+						"discovery",
+						"swagger",
+						"api",
+						"Currency"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Swagger for 'Currency'",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://127.0.0.1:8075/api/portal/v1.3/discovery/swagger/api/Currency?swaggerVersion=2.0&filename=Currency.json",
+					"protocol": "https",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8075",
+					"path": [
+						"api",
+						"portal",
+						"v1.3",
+						"discovery",
+						"swagger",
+						"api",
+						"Currency"
+					],
+					"query": [
+						{
+							"key": "swaggerVersion",
+							"value": "2.0"
+						},
+						{
+							"key": "filename",
+							"value": "Currency.json"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
