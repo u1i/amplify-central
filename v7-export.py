@@ -27,5 +27,5 @@ with io.open('export.yaml', encoding='utf-8', mode='w') as f:
         swagger = apim_host +"/api/portal/v1.3/discovery/swagger/api/" + api["name"]
 
         print api["name"] + ": " + swagger
-        f.write(api["name"] + ":" + swagger + "\n")
+        f.write(api["name"] + ": " + swagger + "\n")
     f.close()
