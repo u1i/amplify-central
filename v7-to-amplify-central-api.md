@@ -9,7 +9,7 @@ You're running a setup of Axway API Manager v7 to manage, protect & consume on p
 ## You need
 
 * An existing setup of API Manager / Gateway v7
-* Some virtualized endpoints in API Manager. 
+* Some virtualized endpoints in API Manager.
 * Access to [Amplify Central](https://apicentral.axway.com)
 * Python 2.7 runtime environment on your local machine to run the helper scripts
 * Bearer Token for API Access - see [Getting Started Guide](api-getting-started.md)
@@ -36,7 +36,7 @@ Let's use cURL commands to see the APIs in action:
 
 # Step 1: Export APIs
 
-Let's use the [API Manager v7 API](http://apidocs.axway.com/api_documentation/apimanager/7.5.3/api-manager-V_1_3-swagger.json) to export the APIs that are managed by this instance. 
+Let's use the [API Manager v7 API](http://apidocs.axway.com/api_documentation/apimanager/7.5.3/api-manager-V_1_3-swagger.json) to export the APIs that are managed by this instance.
 
 You could choose to change the password for 'apiadmin' temporarily for this exercise.
 
@@ -77,8 +77,8 @@ Then run this command:
 
 As a result you should now have a file `export.yaml` that looks like this:
 
-> ATM Locator:https://127.0.0.1:8075/api/portal/v1.3/discovery/swagger/api/ATM Locator
-Currency:https://127.0.0.1:8075/api/portal/v1.3/discovery/swagger/api/Currency
+> ATM Locator: https://127.0.0.1:8075/api/portal/v1.3/discovery/swagger/api/ATM Locator
+Currency: https://127.0.0.1:8075/api/portal/v1.3/discovery/swagger/api/Currency
 
 
 ## Step 2: Import into Amplify Central
