@@ -40,9 +40,9 @@ The Amplify command line tool takes in the configuration file & keys you've crea
 
 `npm i -g @axway/amplify-cli`
 
-You can then use the following command to get the token:
+You can then use the following command to get the token (use the Client ID you saved in the previous step):
 
-`amplify auth login --realm AppcID --json --secret-file key.pem --client-id DOSA_e91221af051e4a5493b680dc8684de98 | jq ".tokens.access_token" | tr -d '"'`
+`amplify auth login --realm AppcID --json --secret-file key.pem --client-id DOSA_XXXX | jq ".tokens.access_token" | tr -d '"'`
 
 The result should look like this:
 
