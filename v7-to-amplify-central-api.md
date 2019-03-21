@@ -38,7 +38,7 @@ Let's use cURL commands to see the APIs in action:
 
 Let's use the [API Manager v7 API](http://apidocs.axway.com/api_documentation/apimanager/7.5.3/api-manager-V_1_3-swagger.json) to export the APIs that are managed by this instance.
 
-You could choose to change the password for 'apiadmin' temporarily for this exercise.
+You could choose to temporarily change the password for 'apiadmin' for this exercise.
 
 The [Postman Collection](apimv7-postman.json) contains the examples for listing all virtualized APIs, getting details and the Swagger definitions for each API.
 
