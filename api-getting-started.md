@@ -105,7 +105,7 @@ The tab 'API Proxies' shows the list of APIs that are managed by your organizati
 ![](./resources/apic-api4.png)
 
 Now we'd like to get that same information – with an API call!
-You can use the attached Postman Collection, or simply do it in cURL like this:
+You can use the attached [Postman Collection](amplify-postman.json), or simply do it in cURL like this:
 
 `curl -H 'Authorization: Bearer __TOKEN__ https://apicentral.axway.com/api/v1/apis`
 
