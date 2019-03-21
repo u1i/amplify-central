@@ -3,3 +3,6 @@ include/
 lib/
 .Python
 pip-selfcheck.json
+export.yaml
+export_*.yaml
+swagger*.json

@@ -2,7 +2,7 @@
 
 ## Scenario
 
-You're running a setup of Axway API Manager v7 to manage, protect & consume on premise APIs. [Amplify Central](https://apicentral.axway.com) gives you a control plane on the cloud – manage, consume & analyze. This guide shows you how to make existing API endpoints (managed by an API v7 environment) available in Amplify Central and gives you the necessary tools & steps to accomplish this.
+You're running a setup of Axway API Manager v7 to manage, protect & consume on premise APIs. [Amplify Central](https://apicentral.axway.com) gives you a control plane on the cloud – manage, consume & analyze. This guide shows you how to make existing API endpoints (managed by an API v7 environment) available in Amplify Central and gives you the necessary tools & steps to accomplish this. Please note: your setup may be different and require specific handling of virtual hosts, routing and access control. 
 
 ![](./resources/v7apic1.png)
 
@@ -63,7 +63,7 @@ A cURL command to retrieve all API endpoints could look like this, assuming the 
     }
 ]
 
-For this exercise, we're using the export tool from this repository to export all APIs into a YAML file.
+For this exercise, we're using the export tool from this repository to export all APIs into a YAML file. 
 
 In v7-export.py change the following settings so it matches your setup:
 
@@ -75,17 +75,28 @@ Then run this command:
 
 `python -W ignore v7-export.py`
 
-As a result you should now have a file `export.yaml` that looks like this:
+This should create `export.yaml` along with Swagger and YAML files for each API the tool finds in API Manager.
+
+For our scenario `export.yaml` will look like this:
 
 > apimanager: https://127.0.0.1:8075   
-> -> ATM Locator: /api/portal/v1.3/discovery/swagger/api/ATM Locator   
-> -> Currency: /api/portal/v1.3/discovery/swagger/api/Currency   
+> .... ATM Locator: /api/portal/v1.3/discovery/swagger/api/ATM Locator   
+> .... Currency: /api/portal/v1.3/discovery/swagger/api/Currency
 
+`swagger_Currency.json` will contain the Swagger definition as retrieved from API Manager. `export_Currency.yaml` will look like this:
 
+> apiVersion: v1   
+proxy:   
+....name: 'Currency'   
+....basePath: /curr   
+....policy:   
+........type: pass-through   
+....team:   
+........name: 'Default Team'   
 
 ## Step 2: Import into Amplify Central
 
-(Python script to import YAML into Amplify Central - each one imported as a Proxy - work in progress)
+(review export - modify where needed - Python script to import YAML into Amplify Central - each one imported as a Proxy - work in progress)
 
 ## Step 3: Verify Imported Proxies and Publish
 
