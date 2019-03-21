@@ -12,7 +12,7 @@ Programmatic access to Amplify Central via API calls for importing APIs, managin
 
 ## How Authentication Works
 
-Amplify Central API endpoints require a "Bearer' token in the HTTP header - it's a JWT token that expires after a while. To get an access token, you''l need to create a service account in Amplify Central, download a JSON config file and use a command line tool to generate the token.
+Amplify Central API endpoints require a "Bearer' token in the HTTP header - it's a JWT token that expires after a while. To get an access token, you'll need to create a service account in Amplify Central, download a JSON config file and use a command line tool to generate the token.
 
 
 ## Step 1 - Create Service Account
