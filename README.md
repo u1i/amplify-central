@@ -9,7 +9,7 @@
 ## APIs & DevOps
 
 * [Accessing Amplify Central via API Calls - Getting Started Guide](api-getting-started.md)
-* [Amplify Central API](https://apicentral.axway.com/api/v1/docs)
+* [Amplify Central API](http://swagger.sotong.io/?url=https://apicentral.axway.com/api/v1/docs)
 * [DevOps API](https://d-api.docs.stoplight.io/new-subpage/devops-api/)
 * [API Catalog API](https://next.stoplight.io/axway-engineering/api-catalog/)
 

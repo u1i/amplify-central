@@ -1,0 +1,52 @@
+{
+	"info": {
+		"_postman_id": "3a7222cc-4e95-420f-aae5-a19f8ff4022d",
+		"name": "Amplify Central - Getting Started",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get APIs",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJTTFpLQmpKbDdmQVpFRDFONzF5S21oZkc3YzJrVm9IREQwdVlQWndEOXpnIn0.eyJqdGkiOiI5MDg2NmJmNC0xY2M2LTQwZjUtOGU3YS0yZjE2ZmI0OWJmYzgiLCJleHAiOjE1NTMxNDY0NjQsIm5iZiI6MCwiaWF0IjoxNTUzMTQ0NjY0LCJpc3MiOiJodHRwczovL2xvZ2luLmF4d2F5LmNvbS9hdXRoL3JlYWxtcy9BcHBjSUQiLCJhdWQiOiJET1NBX2U5MTIyMWFmMDUxZTRhNTQ5M2I2ODBkYzg2ODRkZTk4Iiwic3ViIjoiYTJmODk5MWYtNjZmNy00NzhmLTkzNzctNzg2MGUxMjQ5NTZiIiwidHlwIjoiQmVhcmVyIiwiYXpwIjoiRE9TQV9lOTEyMjFhZjA1MWU0YTU0OTNiNjgwZGM4Njg0ZGU5OCIsImF1dGhfdGltZSI6MCwic2Vzc2lvbl9zdGF0ZSI6ImY4YmE4ZTU1LWI2N2YtNDUwMS05YjJmLTM4ZGEyMjA2YTIzOCIsImFjciI6IjEiLCJhbGxvd2VkLW9yaWdpbnMiOltdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsidW1hX2F1dGhvcml6YXRpb24iXX0sInJlc291cmNlX2FjY2VzcyI6eyJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJjbGllbnRJZCI6IkRPU0FfZTkxMjIxYWYwNTFlNGE1NDkzYjY4MGRjODY4NGRlOTgiLCJlbnZpcm9ubWVudElkIjoiZTkxMjIxYWYwNTFlNGE1NDkzYjY4MGRjODY4NGRlOTgiLCJjbGllbnRIb3N0IjoiNDMuMjQ4LjIxMi4xOSIsImNsaWVudEFkZHJlc3MiOiI0My4yNDguMjEyLjE5Iiwib3JnSWQiOiI5NjY5ODE5OTI4MjgzNzcifQ.K0M_4MHuflDGUwO-25aPkEo0RHLfXvRB0RSXdGNJnNrUl6Dm5kHs3kuoxCTp6I1boLtM89wcsZEU5IOiPbtAMCsm7JCFcfRNdWKin-Ls6SrEllF5sFUyhCdtoXbfeirOvIjXKFXvt3tjZ8BTIYQL9iNJ8CYoHhiEFAV79X7n16UeToQxbzQ4JwqZeeO2rsWEGSsUgHdERao1B0rAnucv00AWqfr8OPu8sHuMQiUhDkEhYPyLMXNM4EYqKnPXdry5CjB5hdN6pD-BwfyCq_EZZxEfNYqnYiPOAjifV09OhHLYLiT2B7f5WTwBrDM9AlduIaJBTE7qbj8LR63J1b6dsQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://apicentral.axway.com/api/v1/apis",
+					"protocol": "https",
+					"host": [
+						"apicentral",
+						"axway",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"apis"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
