@@ -75,15 +75,20 @@ Then run this command:
 
 `python -W ignore v7-export.py`
 
-This should create `export.yaml` along with Swagger and YAML files for each API the tool finds in API Manager.
+This should create `export.yaml` along with Swagger and YAML files for each API the tool finds in API Manager, so in our case:
 
-For our scenario `export.yaml` will look like this:
+* `swagger_Currency.json`
+* `export_Currency.yaml`
+* `swagger_ATMLocator.json`
+* `export_ATMLocator.yaml`
+
+The content `export.yaml` looks like this:
 
 > apimanager: https://127.0.0.1:8075   
 > .... ATM Locator: /api/portal/v1.3/discovery/swagger/api/ATM Locator   
 > .... Currency: /api/portal/v1.3/discovery/swagger/api/Currency
 
-`swagger_Currency.json` will contain the Swagger definition as retrieved from API Manager. `export_Currency.yaml` will look like this:
+And `export_Currency.yaml` contains some more information about the API we extracted from API Manager (similar for `export_ATMLocator.yaml`):
 
 > apiVersion: v1   
 proxy:   
