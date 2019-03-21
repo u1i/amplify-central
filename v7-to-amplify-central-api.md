@@ -62,3 +62,33 @@ A cURL command to retrieve all API endpoints could look like this, assuming the 
         "type": "rest"
     }
 ]
+
+For this exercise, we're using the export tool from this repository to export all APIs into a YAML file.
+
+In v7-export.py change the following settings so it matches your setup:
+
+`apim_host="https://127.0.0.1:8075"`   
+`apim_user="apiadmin"`   
+`apim_password="changeme"`
+
+Then run this command:
+
+`python -W ignore v7-export.py`
+
+As a result you should now have a file `export.yaml` that looks like this:
+
+> ATM Locator:https://127.0.0.1:8075/api/portal/v1.3/discovery/swagger/api/ATM Locator
+Currency:https://127.0.0.1:8075/api/portal/v1.3/discovery/swagger/api/Currency
+
+
+## Step 2: Import into Amplify Central
+
+(work in progress)
+
+## Step 3: Verify Imported Proxies and Publish
+
+(work in progress)
+
+## Step 4: Consume APIs
+
+(work in progress)
