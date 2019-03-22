@@ -6,3 +6,6 @@ pip-selfcheck.json
 export.yaml
 export_*.yaml
 swagger*.json
+key.pem
+DOSA*
+access_token.jwt

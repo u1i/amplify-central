@@ -115,6 +115,14 @@ For my scenario I'm going to use an API Manager on AWS to serve the API, so I'm 
 
 > "host" : "52.221.197.254.nip.io"
 
+After this, we can use the Python script in this repository to import the endpoints into Amplify Central. For this you need your [Amplify Central Access Token]([Getting Started Guide](api-getting-started.md)), the script `get_access_token.sh` helps you to retrieve it and store it in a file called `access_token.jwt` which the Python script expects. Whatever your way might be to get the token, make sure `access_token.jwt` looks similar to this before you continue:
+
+> eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJTTFpLQmpKbDdmQVpFRDFONzF5S21oZkc3YzJrVm9IREQwdVlQWndEXXXX0IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJjbGllbnRJZCI6IkRPU0FfZTkxMjIxYWYwNTFlNGE1NDkzYjY4MGRjODY4NGRlOTgiLCJlbnZpcm9ubWVudElkIjoiZTkxMjIxYWYwNTFlNGE1NDkzYjY4MGRjODY4NGRlOTgiLCJjbGllbnRIb3N0IjoiMTExLjY1LjcxLjIzNCIsImNsaWVudEFkZHJlc3MiOiIxMTEuNjUuNzEuMjM0Iiwib3JnSWQiOiI5NjY5ODE5OTI4MjgzNzcifQ.AM37pO8RS_bETJtTtIYAGHboRCl1tZ5bWZo5a5fwf28kftzZRAc802A55xvYK27XXaQkP0eAMR7YrCmhv2ekWu4T0NU-eAUX6YoqDaPKZUYQ9geDqi4aPBF6vGAKmjR0p-iO7R0_7_Igbv_9jbXXXXltC243EhqjbN4pSlsGNfVLoyNxH-YvEXduHGLdcjaDfYd5Hw-vuyXvBwtWk5sXXXq_fR2yAAtlsJRMObzrU0mGAnZP8zv6g3Y1laesdhkNMtagWRobxLDCT2JnOJgFszuo1xi5aAowRGRcO-h9c2UZ4ZaaJoqJw
+
+Now you can start the import by issuing this command (make sure that the exported files from the previous step are in the same directory):
+
+`python amplify-import.py`
+
 (Python script to import YAML into Amplify Central - each one imported as a Proxy - work in progress)
 
 ## Step 3: Verify Imported Proxies and Publish
