@@ -86,7 +86,7 @@ This should create `export.yaml` along with Swagger and YAML files for each API 
 
 The content `export.yaml` looks like this:
 
-> apimanager: https://127.0.0.1:8075   
+> apis:   
 > .... ATM Locator: /api/portal/v1.3/discovery/swagger/api/ATM Locator   
 > .... Currency: /api/portal/v1.3/discovery/swagger/api/Currency
 

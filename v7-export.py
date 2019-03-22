@@ -23,7 +23,7 @@ frontend_apis = json.loads(response.text)
 
 with io.open('export.yaml', encoding='utf-8', mode='w') as f:
 
-    f.write(u"apimanager: " + apim_host + "\n")
+    f.write(u"apis:\n")
 
     # Loop through all APIs
     for api in frontend_apis:
