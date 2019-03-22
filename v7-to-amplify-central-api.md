@@ -2,7 +2,9 @@
 
 ## Scenario
 
-You're running a setup of Axway API Manager v7 to manage, protect & consume on premise APIs. [Amplify Central](https://apicentral.axway.com) gives you a control plane on the cloud – manage, consume & analyze. This guide shows you how to make existing API endpoints (managed by an API v7 environment) available in Amplify Central and gives you the necessary tools & steps to accomplish this. Please note: your setup may be different and require specific handling of virtual hosts, routing and access control. 
+You're running a setup of Axway API Manager v7 to manage, protect & consume on premise APIs. [Amplify Central](https://apicentral.axway.com) gives you a control plane on the cloud – manage, consume & analyze. This guide gives you an overview and a couple of tools (scripts & Postman collection) for making existing API endpoints (managed by an API v7 environment) available in Amplify Central.
+
+We'll use a simplified setup for this exercise to illustrate the concept and show you the tools you can use. Of course, your environment will be different in the way you've set up and configured API Management, particularly around security, firewalling, virtual hosts & integration of identity management.
 
 ![](./resources/v7apic1.png)
 
@@ -16,7 +18,7 @@ You're running a setup of Axway API Manager v7 to manage, protect & consume on p
 
 ## Starting Point: API Manager v7
 
-Let's look at our initial state, we have two API endpoints (from the [Yoisho Open Banking Project](https://github.com/u1i/yoisho)) virtualized in API Manager:
+Let's look at our initial state, we have two API endpoints (from the [Yoisho Open Banking Project](https://github.com/u1i/yoisho)) virtualized in API Manager running in a dockerized environment on my local machine:
 
 ![](./resources/v7-1.png)
 
