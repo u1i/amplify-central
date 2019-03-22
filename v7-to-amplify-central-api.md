@@ -105,7 +105,7 @@ proxy:
 
 As a next step, we'd like to get these API endpoints into Amplify Central. The [Postman Collection](amplify-postman.json) in this repository gives you examples on working with the API for Amplify Central in order to accomplish this.
 
-This is the moment where reviewing the exported data is a good idea & making necessary modifications. The `host` field in the Swagger documents are of particular importance: **Amplify Central must be able to access the endpoints**. In a default setup of API Manager this is the listener on port 8065 for virtualized APIs. Depending on your setup there are several options for making this available to the outside world (and your Axway architect will be glad to give you advice on this).
+This is the moment where reviewing the exported data is a good idea & making necessary modifications. The `host` fields in the Swagger documents are of particular importance: **Amplify Central must be able to access the endpoints**. In a default setup of API Manager this is the listener on port 8065 for virtualized APIs. Depending on your setup there are several options for making this available to the outside world (and your Axway architect will be glad to give you advice on this).
 
 Let's look at `swagger_Currency.json` and the relevant key:
 
