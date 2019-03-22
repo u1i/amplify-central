@@ -4,4 +4,4 @@
 dosa=$(ls DOSA* | sed "s/\.json//")
 echo $dosa
 
-amplify auth login --realm AppcID --json --secret-file key.pem --client-id DOSA_e91221af051e4a5493b680dc8684de98 | jq ".tokens.access_token" | tr -d '"' > access_token.jwt
+amplify auth login --realm AppcID --json --secret-file key.pem --client-id DOSA_e91221af051e4a5493b680dc8684de98 | jq ".tokens.access_token" | tr -d '"' | tr -d "\n" > access_token.jwt
