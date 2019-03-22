@@ -101,9 +101,21 @@ proxy:
 ....team:   
 ........name: 'Default Team'   
 
-## Step 2: Import into Amplify Central
+## Step 2: Import Endpoints into Amplify Central
 
-(review export - modify where needed - Python script to import YAML into Amplify Central - each one imported as a Proxy - work in progress)
+As a next step, we'd like to get these API endpoints into Amplify Central. The [Postman Collection](amplify-postman.json) in this repository gives you examples on working with the API for Amplify Central in order to accomplish this.
+
+This is the moment where reviewing the exported data is a good idea & making necessary modifications. The `host` field in the Swagger documents are of particular importance: **Amplify Central must be able to access the endpoints**. In a default setup of API Manager this is the listener on port 8065 for virtualized APIs. Depending on your setup there are several options for making this available to the outside world (and your Axway architect will be glad to give you advice on this).
+
+Let's look at `swagger_Currency.json` and the relevant key:
+
+> "host" : "api.demo.axway.com:8065"
+
+For my scenario I'm going to use an API Manager on AWS to serve the API, so I'm changing the value accordingly:
+
+> "host" : "52.221.197.254.nip.io"
+
+(Python script to import YAML into Amplify Central - each one imported as a Proxy - work in progress)
 
 ## Step 3: Verify Imported Proxies and Publish
 
