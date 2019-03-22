@@ -111,7 +111,7 @@ Let's look at `swagger_Currency.json` and the relevant key:
 
 > "host" : "api.demo.axway.com:8065"
 
-For my scenario I'm going to use an API Manager on AWS to serve the API, so I'm changing the value accordingly:
+For my scenario I'm going to use an API Manager on AWS to serve the API, so I'm changing the value accordingly [1]:
 
 > "host" : "52.221.197.254.nip.io"
 
@@ -124,3 +124,7 @@ For my scenario I'm going to use an API Manager on AWS to serve the API, so I'm 
 ## Step 4: Consume APIs
 
 (login as 'user' into Amplify Central - download Swagger - consume API - work in progress)
+
+#### Annotations
+
+[1] nip.io helps you 'convert' IP addresses into FQDNs. Use it with [letsencrypt](https://letsencrypt.org/) to get a free HTTPS certificate!
