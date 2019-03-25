@@ -111,7 +111,7 @@ Let's look at `swagger_Currency.json` and the relevant key:
 
 > "host" : "api.demo.axway.com:8065"
 
-For my scenario I'm going to use an endpoint on the internet to serve the API, so I'm changing the value accordingly [1]:
+For my scenario I'm going to use an endpoint on the internet to serve the API, so I'm changing the value accordingly:
 
 > "host" : "http://backend.yoisho.dob.jp"
 
@@ -161,7 +161,3 @@ The published API will now appear in the [API Catalog](https://apicentral.axway.
 ## Step 4: Consume APIs
 
 (login as 'user' into Amplify Central - download Swagger - consume API - work in progress)
-
-#### Annotations
-
-[1] nip.io helps you 'convert' IP addresses into FQDNs. Use it with [letsencrypt](https://letsencrypt.org/) to get a free HTTPS certificate!
