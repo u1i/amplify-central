@@ -1,6 +1,4 @@
-import yaml
-
-# Config
+import yaml, requests
 
 # Get access_token from file
 with open("access_token.jwt", mode='r') as tfile:
@@ -19,4 +17,39 @@ with open("export.yaml", 'r') as stream:
         print(exc)
 stream.close()
 
-print apis
+for api in apis:
+    api_urlsafe = api.replace(" ", "")
+    print "Importing & Deploying API " + api
+
+    headers = {
+        'Authorization': "Bearer " + access_token,
+        'cache-control': "no-cache"
+        }
+
+    cfgfile = "export_" + api_urlsafe + ".yaml"
+    swaggerfile = "swagger_" + api_urlsafe + ".json"
+
+    # Import API
+    url = "https://apicentral.axway.com/api/apiAggregator/v1/proxies"
+
+    files = {
+        'config': (cfgfile, open(cfgfile, 'rb'), 'text/yaml'),
+        'specification': (swaggerfile, open(swaggerfile, 'rb'), 'application/json'),
+    }
+
+    r = requests.post(url, files=files, headers=headers)
+    print "--- " + r.text
+
+    # Promote API
+    url = "https://apicentral.axway.com/api/apiAggregator/v1/promote"
+
+    files = {
+        'source': 'Test Runtime',
+        'target': 'Test Runtime',
+        'config': (cfgfile, open(cfgfile, 'rb'), 'text/yaml'),
+    }
+
+    data = { 'target': 'Test Runtime'}
+
+    r = requests.post(url, data=data, files=files, headers=headers)
+    print "--- " + r.text

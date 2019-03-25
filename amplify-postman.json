@@ -47,6 +47,116 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "Import API",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJTTFpLQmpKbDdmQVpFRDFONzF5S21oZkc3YzJrVm9IREQwdVlQWndEOXpnIn0.eyJqdGkiOiI4ODE5ZTFkZC05MjgyLTRiYzQtOWM4NC1lOGRjN2ViODhmNzciLCJleHAiOjE1NTMyNTMxOTAsIm5iZiI6MCwiaWF0IjoxNTUzMjUxMzkwLCJpc3MiOiJodHRwczovL2xvZ2luLmF4d2F5LmNvbS9hdXRoL3JlYWxtcy9BcHBjSUQiLCJhdWQiOiJET1NBX2U5MTIyMWFmMDUxZTRhNTQ5M2I2ODBkYzg2ODRkZTk4Iiwic3ViIjoiYTJmODk5MWYtNjZmNy00NzhmLTkzNzctNzg2MGUxMjQ5NTZiIiwidHlwIjoiQmVhcmVyIiwiYXpwIjoiRE9TQV9lOTEyMjFhZjA1MWU0YTU0OTNiNjgwZGM4Njg0ZGU5OCIsImF1dGhfdGltZSI6MCwic2Vzc2lvbl9zdGF0ZSI6IjRjNDFjMzJkLWI2MjgtNGExZS1iYWVkLWY0OTEwMTQ2NzMzMSIsImFjciI6IjEiLCJhbGxvd2VkLW9yaWdpbnMiOltdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsidW1hX2F1dGhvcml6YXRpb24iXX0sInJlc291cmNlX2FjY2VzcyI6eyJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJjbGllbnRJZCI6IkRPU0FfZTkxMjIxYWYwNTFlNGE1NDkzYjY4MGRjODY4NGRlOTgiLCJlbnZpcm9ubWVudElkIjoiZTkxMjIxYWYwNTFlNGE1NDkzYjY4MGRjODY4NGRlOTgiLCJjbGllbnRIb3N0IjoiMTExLjY1LjcxLjIzNCIsImNsaWVudEFkZHJlc3MiOiIxMTEuNjUuNzEuMjM0Iiwib3JnSWQiOiI5NjY5ODE5OTI4MjgzNzcifQ.r734PQaLZxa29uiDdgn4kylzWC2xmqfX0QLQQcQkCQkr1Gle79PnnnqtBQDQcxyGglWiuH1RDeYQoAtPZ2GS0uJXZT4pRNw_Cw9-4soRoZ0Z0rLWpsdI9Skea4p6KjgWiDdYyYNCwV0EKb8GRI9CBwerU-wgRS0BWg4_jKGOGyAi-13evUJxMstydWZQBfWBDg4wGrX0SUrTClHbAq95ZWLRNGC_0Mf6PCaHD9ZVMEtzSHc9JSfYqMOVr0T3N4ZhPHx0SCwto0yZ5sDtuECTvarSZgEC_20SiZmfEVvFclXOD4eefZGmX284f_quUJVw8x6uZYMKOokPvASLJTMung",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "config",
+							"type": "file",
+							"src": ""
+						},
+						{
+							"key": "specification",
+							"type": "file",
+							"src": ""
+						}
+					]
+				},
+				"url": {
+					"raw": "https://apicentral.axway.com/api/apiAggregator/v1/proxies",
+					"protocol": "https",
+					"host": [
+						"apicentral",
+						"axway",
+						"com"
+					],
+					"path": [
+						"api",
+						"apiAggregator",
+						"v1",
+						"proxies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Promote API",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJTTFpLQmpKbDdmQVpFRDFONzF5S21oZkc3YzJrVm9IREQwdVlQWndEOXpnIn0.eyJqdGkiOiI1MGM5NGU5OC1kZjg1LTQyNjUtYTRlOC1lZDc1YzkxNzE3YzEiLCJleHAiOjE1NTM1MDY3NjgsIm5iZiI6MCwiaWF0IjoxNTUzNTA0OTY4LCJpc3MiOiJodHRwczovL2xvZ2luLmF4d2F5LmNvbS9hdXRoL3JlYWxtcy9BcHBjSUQiLCJhdWQiOiJET1NBX2U5MTIyMWFmMDUxZTRhNTQ5M2I2ODBkYzg2ODRkZTk4Iiwic3ViIjoiYTJmODk5MWYtNjZmNy00NzhmLTkzNzctNzg2MGUxMjQ5NTZiIiwidHlwIjoiQmVhcmVyIiwiYXpwIjoiRE9TQV9lOTEyMjFhZjA1MWU0YTU0OTNiNjgwZGM4Njg0ZGU5OCIsImF1dGhfdGltZSI6MCwic2Vzc2lvbl9zdGF0ZSI6ImEzYzVhM2E4LWI5OWMtNDM1NS05MmVhLTBmNjRjYzJkOTY2YyIsImFjciI6IjEiLCJhbGxvd2VkLW9yaWdpbnMiOltdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsidW1hX2F1dGhvcml6YXRpb24iXX0sInJlc291cmNlX2FjY2VzcyI6eyJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJjbGllbnRJZCI6IkRPU0FfZTkxMjIxYWYwNTFlNGE1NDkzYjY4MGRjODY4NGRlOTgiLCJlbnZpcm9ubWVudElkIjoiZTkxMjIxYWYwNTFlNGE1NDkzYjY4MGRjODY4NGRlOTgiLCJjbGllbnRIb3N0IjoiMTA0LjE1My4yMjQuMTY5IiwiY2xpZW50QWRkcmVzcyI6IjEwNC4xNTMuMjI0LjE2OSIsIm9yZ0lkIjoiOTY2OTgxOTkyODI4Mzc3In0.NYfD5UQhJW70WzxOmV3KF6RJc9xemkNApbwEeO2In9Bm97u7xH0HWrmd02Cywlm53JS-GOmP3vB5QVy1USmvsyr64CJp3mJvgf6TSzu3thisP1c5GiwOKbPOqJYD_H7TspDP7bbwQhJARp7HjuDwSHnXuDs8JeW4GQEDem8gnuxbwpEtBz1Ihf_HQo8oGmMl5Xu9mnFWZAoLcBeKjWpl6NaybWMZ4HAYOrtXeQxe3TQ81vCOkjLvul0xEnra6_JQosk4frRGgpmjqjnTr8sDTE3nfRg6-yzC6fDch704d_Nz2gFUI-9pwIaaYlCkCMmaQGjI8jJqJ5OnjNCTylCkdA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "config",
+							"type": "file",
+							"src": ""
+						},
+						{
+							"key": "target",
+							"value": "Test Runtime",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://apicentral.axway.com/api/apiAggregator/v1/promote",
+					"protocol": "https",
+					"host": [
+						"apicentral",
+						"axway",
+						"com"
+					],
+					"path": [
+						"api",
+						"apiAggregator",
+						"v1",
+						"promote"
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }

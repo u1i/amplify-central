@@ -111,9 +111,9 @@ Let's look at `swagger_Currency.json` and the relevant key:
 
 > "host" : "api.demo.axway.com:8065"
 
-For my scenario I'm going to use an API Manager on AWS to serve the API, so I'm changing the value accordingly [1]:
+For my scenario I'm going to use an endpoint on the internet to serve the API, so I'm changing the value accordingly [1]:
 
-> "host" : "52.221.197.254.nip.io"
+> "host" : "http://backend.yoisho.dob.jp"
 
 After this, we can use the Python script in this repository to import the endpoints into Amplify Central. For this you need your [Amplify Central Access Token](api-getting-started.md), the script `get_access_token.sh` helps you to retrieve it and store it in a file called `access_token.jwt` which the Python script expects. Whatever your way might be to get the token, make sure `access_token.jwt` looks similar to this before you continue:
 
@@ -123,11 +123,40 @@ Now you can start the import by issuing the following command (make sure that th
 
 `python amplify-import.py`
 
-(Python script to import YAML into Amplify Central - each one imported as a Proxy - work in progress)
+In my scenario I am getting the following result:
+
+> Importing & Deploying API Currency   
+--- {"proxyName":"Currency"}   
+--- {"url":"https://test-e4f8d6fXXX.apicentral.axwayamplify.com","apiKeys":null}   
+Importing & Deploying API ATM Locator   
+--- {"proxyName":"ATM Locator"}   
+--- {"url":"https://test-e4f8d6fXXX.apicentral.axwayamplify.com","apiKeys":null}   
+
+Now if we browse to API Central, we can see that the endpoints have been imported:
+
+![](./resources/apic-p1.png)
 
 ## Step 3: Verify Imported Proxies and Publish
 
-(Proxies now appear in Amplify Central - review & publish - work in progress)
+You will see that the import script has also deployed the imported APIs to the 'Test Runtime', so we don't have to do that manually:
+
+![](./resources/apic-p2.png)
+
+We can click on the details for the API endpoint to verify that the information has been imported:
+
+![](./resources/apic-p3.png)
+
+Let's try out the API and see if the endpoint works:
+
+![](./resources/apic-p4.png)
+
+Now as a final step we're going to publish the API in the catalog:
+
+![](./resources/apic-p6.png)
+
+The published API will now appear in the [API Catalog](https://apicentral.axway.com/catalog):
+
+![](./resources/apic-p9.png)
 
 ## Step 4: Consume APIs
 
