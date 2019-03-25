@@ -113,7 +113,7 @@ Let's look at `swagger_Currency.json` and the relevant key:
 
 For my scenario I'm going to use an endpoint on the internet to serve the API, so I'm changing the value accordingly:
 
-> "host" : "http://backend.yoisho.dob.jp"
+> "host" : "backend.yoisho.dob.jp"
 
 After this, we can use the Python script in this repository to import the endpoints into Amplify Central. For this you need your [Amplify Central Access Token](api-getting-started.md), the script `get_access_token.sh` helps you to retrieve it and store it in a file called `access_token.jwt` which the Python script expects. Whatever your way might be to get the token, make sure `access_token.jwt` looks similar to this before you continue:
 
