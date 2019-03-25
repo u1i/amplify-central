@@ -36,7 +36,7 @@ Let's use cURL commands to see the APIs in action:
 
 > {"result": [{"lat": "35.6684231", "lon": "139.6833085", "location": "Ebisu Station", "id": "2"}, {"lat": "35.6284713", "lon": "139.736571", "location": "Shinagawa Station", "id": "1"}]}
 
-# Step 1: Export APIs
+## Step 1: Export APIs
 
 Let's use the [API Manager v7 API](http://apidocs.axway.com/api_documentation/apimanager/7.5.3/api-manager-V_1_3-swagger.json) to export the APIs that are managed by this instance.
 
@@ -65,6 +65,8 @@ A cURL command to retrieve all API endpoints could look like this, assuming the 
     }
 ]
 
+### v7 Export Tool (Python)
+
 For this exercise, we're using the export tool from this repository to export all APIs into a YAML file. 
 
 In v7-export.py change the following settings so it matches your setup:
@@ -76,6 +78,8 @@ In v7-export.py change the following settings so it matches your setup:
 Then run this command:
 
 `python -W ignore v7-export.py`
+
+### Results: YAML + Swagger Files
 
 This should create `export.yaml` along with Swagger and YAML files for each API the tool finds in API Manager, so in our case:
 
@@ -105,6 +109,8 @@ proxy:
 
 As a next step, we'd like to get these API endpoints into Amplify Central. The [Postman Collection](amplify-postman.json) in this repository gives you examples on working with the API for Amplify Central in order to accomplish this.
 
+### Review & Modify where needed
+
 This is the moment where reviewing the exported data is a good idea & making necessary modifications. The `host` fields in the Swagger documents are of particular importance: **Amplify Central must be able to access the endpoints**. In a default setup of API Manager this is the listener on port 8065 for virtualized APIs. Depending on your setup there are several options for making this available to the outside world (and your Axway architect will be glad to give you advice on this).
 
 Let's look at `swagger_Currency.json` and the relevant key:
@@ -115,6 +121,8 @@ For my scenario I'm going to use an endpoint on the internet to serve the API, s
 
 > "host" : "backend.yoisho.dob.jp"
 
+### Amplify Central Import Tool (Python)
+
 After this, we can use the Python script in this repository to import the endpoints into Amplify Central. For this you need your [Amplify Central Access Token](api-getting-started.md), the script `get_access_token.sh` helps you to retrieve it and store it in a file called `access_token.jwt` which the Python script expects. Whatever your way might be to get the token, make sure `access_token.jwt` looks similar to this before you continue:
 
 > eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJTTFpLQmpKbDdmQVpFRDFONzF5S21oZkc3YzJrVm9IREQwdVlQWndEXXXX0IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJjbGllbnRJZCI6IkRPU0FfZTkxMjIxYWYwNTFlNGE1NDkzYjY4MGRjODY4NGRlOTgiLCJlbnZpcm9ubWVudElkIjoiZTkxMjIxYWYwNTFlNGE1NDkzYjY4MGRjODY4NGRlOTgiLCJjbGllbnRIb3N0IjoiMTExLjY1LjcxLjIzNCIsImNsaWVudEFkZHJlc3MiOiIxMTEuNjUuNzEuMjM0Iiwib3JnSWQiOiI5NjY5ODE5OTI4MjgzNzcifQ.AM37pO8RS_bETJtTtIYAGHboRCl1tZ5bWZo5a5fwf28kftzZRAc802A55xvYK27XXaQkP0eAMR7YrCmhv2ekWu4T0NU-eAUX6YoqDaPKZUYQ9geDqi4aPBF6vGAKmjR0p-iO7R0_7_Igbv_9jbXXXXltC243EhqjbN4pSlsGNfVLoyNxH-YvEXduHGLdcjaDfYd5Hw-vuyXvBwtWk5sXXXq_fR2yAAtlsJRMObzrU0mGAnZP8zv6g3Y1laesdhkNMtagWRobxLDCT2JnOJgFszuo1xi5aAowRGRcO-h9c2UZ4ZaaJoqJw
@@ -122,6 +130,8 @@ After this, we can use the Python script in this repository to import the endpoi
 Now you can start the import by issuing the following command (make sure that the exported files from the previous step are in the same directory):
 
 `python amplify-import.py`
+
+### Successful Import
 
 In my scenario I am getting the following result:
 
