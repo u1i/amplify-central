@@ -1,3 +1,6 @@
+## Import APIs into Amplify Central
+## Please note: this is a conceptual prototype and not an officially supported script
+## Author: uli@axway.com
 import yaml, requests
 
 # Get access_token from file
