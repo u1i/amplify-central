@@ -101,7 +101,7 @@ The methods should all work (please note: the live endpoints cannot be used to a
 
 ![](./resources/ampc18.png)
 
-Amplify Central also gives you the cURL command - try it out!
+Amplify Central also gives you the cURL command - try it out! There is also a Swagger download which you can import into Postman.
 
 ![](./resources/ampc19.png)
 
