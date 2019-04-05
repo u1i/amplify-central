@@ -4,7 +4,7 @@
 
 In this lab you will:
 
-* import an API into Amplify Central
+* import an API Swagger into Amplify Central
 * add API Key authentication
 * deploy the API endpoint
 * publish the API in Amplify Central Catalog
