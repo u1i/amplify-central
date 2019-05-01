@@ -1,5 +1,8 @@
 # Virtualize, Publish & Consume an API with Amplify Central
 
+
+![](./resources/labo1.png)
+
 ## Objectives
 
 In this lab you will:
