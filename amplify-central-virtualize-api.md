@@ -127,6 +127,14 @@ Voila! We now have 'ATM Locations' published:
 ![](./resources/ampc23.png)
 ![](./resources/ampc24.png)
 
+# Step 8: Analytics
+
+After you've made a couple of requests with cURL, Postman or simply in the browser interface, you can click on the 'API Observer' tab to see the analytics and inspect individual requests:
+
+![](./resources/ao01.png)
+![](./resources/ao02.png)
+
+
 
 
 
