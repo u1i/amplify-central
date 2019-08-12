@@ -1,0 +1,51 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: currency7
+    apic-managed: "true"
+  creationTimestamp: null
+  name: currency7
+  namespace: apic-demo
+spec:
+  ports:
+  - port: 8080
+    protocol: TCP
+    targetPort: http
+    name: http
+  selector:
+    run: currency7
+status:
+  loadBalancer: {}
+---
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    run: currency7
+  name: currency7
+  namespace: apic-demo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      run: currency7
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: currency7
+        run: currency7
+    spec:
+      containers:
+      - image: u1ih/yoisho-currency:11
+        imagePullPolicy: Always
+        name: currency7
+        ports:
+        - containerPort: 8080
+          name: http
+        resources: {}
+status: {}
+
